@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories 💖</title>
+    <!-- We reuse cause.css to keep the background and fonts consistent -->
+    <link rel="stylesheet" href="./cause.css">
+    <style>
+        .gallery-container {
+            padding: 50px 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .gallery-container h1 {
+            font-family: 'Bubblegum Sans', cursive;
+            color: #ff69b4;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.2);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 350px; /* Keeps all photos the same height */
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .photo-caption {
+            margin-top: 15px;
+            font-family: 'Quicksand', sans-serif;
+            color: #ff69b4;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .back-nav {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        /* Styling for the back button to match the main site */
+        .back-btn {
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 2px dashed #ff69b4;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff69b4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heart Cursor Wrapper -->
+    <div class="custom-cursor">
+        <svg viewBox="0 0 24 24">
+            <path fill="#ff69b4" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Our Story in Photos 📸</h1>
+        
+        <div class="photo-grid">
+            <!-- Photo 1 -->
+            <div class="photo-card">
+                <img src="bb.jpeg" alt="Memory 1">
+                <p class="photo-caption">Where it all began ❤️</p>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-card">
+                <img src="fd.jpeg" alt="Memory 2">
+                <p class="photo-caption">Our First Date </p>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-card">
+                <img src="haw.jpeg" alt="Memory 3">
+                <p class="photo-caption">HAWTIEEEEE </p>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo-card">
+                <img src="fc.jpeg" alt="Memory 4">
+                <p class="photo-caption">FIT CHECK </p>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="photo-card">
+                <img src="pretty.jpeg" alt="Memory 5">
+                <p class="photo-caption">You're so pretty! </p>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="photo-card">
+                <img src="farewell.jpeg" alt="Memory 6">
+                <p class="photo-caption">WHERES MY HAND HMMMMMMM?</p>
+            </div>
+
+            <!-- Photo 7 -->
+            <div class="photo-card">
+                <img src="sp.jpeg" alt="Memory 7">
+                <p class="photo-caption">SMARTY PANTS</p>
+            </div>
+
+            <!-- Photo 8 -->
+            <!-- Photo 8 (MP4 Video Version) -->
+        <div class="photo-card">
+            <video 
+                src="forever.mp4" 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                style="width: 100%; height: 350px; object-fit: cover; border-radius: 10px;">
+            </video>
+            <p class="photo-caption">To forever with you </p>
+        </div>
+        </div>
+
+        <div class="back-nav">
+            <a href="cause.html" class="back-btn">← Back to your letter</a>
+        </div>
+    </div>
+
+    <!-- This ensures the hearts and cursor work on the gallery too -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./cause.js"></script>
+</body>
+</html>
